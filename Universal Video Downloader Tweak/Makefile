@@ -1,7 +1,9 @@
-SYSROOT = /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk
-ARCHS = armv7 armv7s arm64
+TARGET=iphone:clang:latest:6.0
+THEOS_DEVICE_PORT=22
+GO_EASY_ON_ME=1
+export ARCHS = armv7 armv7s arm64
 
-include /Users/Harrison/theos/makefiles/common.mk
+include $(THEOS)/makefiles/common.mk
 
 TWEAK_NAME = UniversalVideoDownloader
 UniversalVideoDownloader_FILES = UVDListener.xm UVDAlertViewHandler.m UVDVideoProcessor.m UVDAuthenticationDialog.m UVDDataCompressor.m UVDDataDecompressor.m UVDHTTPRequest.m UVDInputStream.m UVDReachability.m
